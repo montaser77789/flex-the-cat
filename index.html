@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0" />
+  <title>Felix - The Cat</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Righteous&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/brands.min.css" />
+  <link rel="stylesheet" href="css/fontawesome.min.css" />
+  <link rel="stylesheet" href="css/regular.min.css" />
+  <link rel="stylesheet" href="css/solid.min.css" />
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+
+  <!-- Slick Slider -->
+  <link rel="stylesheet" href="css/slick.min.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="main-head main-head sticky">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/logo.webp" alt="Felix Logo" class="logo" />
+        </a>
+        <div class="navbar-rht">
+          <a href="https://www.pinksale.finance/launchpad/ethereum/0x8D702DB732470660635E5286b8efE4084899E357" target="_blank" class="cmn-btn">Presale</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="stick"></span>
+          <span class="stick"></span>
+          <span class="stick"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <button class="btn-close ms-auto d-lg-none close-btn" aria-label="Close">
+            <i class="fas fa-times"></i> <!-- أيقونة الإغلاق -->
+          </button>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#felixnomics">Tokenomics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#roadmap">Roadmap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://felix-the-cat.gitbook.io/felix-the-cat-whitepaper/" target="_blank">Whitepaper</a>
+            </li>
+          </ul>
+        </div>
+      
+      </nav>
+    </div>
+  </header>
+
+  <!-- JavaScript -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/common.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbarTogglers = document.querySelectorAll('.navbar-toggler');
+      const navbarCollapse = document.querySelector('#navbarSupportedContent');
+      const closeBtn = document.querySelector('.btn-close');
+
+      navbarTogglers.forEach(toggler => {
+        toggler.addEventListener('click', function () {
+          this.classList.toggle('collapsed');
+          navbarCollapse.classList.toggle('show');
+        });
+      });
+
+      closeBtn.addEventListener('click', function () {
+        navbarCollapse.classList.remove('show');
+      });
+
+      // Close navbar when a link is clicked (for single-page navigation)
+      const navLinks = document.querySelectorAll('.navbar-nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 991) {
+            navbarCollapse.classList.remove('show');
+            navbarTogglers.forEach(toggler => toggler.classList.remove('collapsed'));
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
