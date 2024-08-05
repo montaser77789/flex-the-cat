@@ -1503,6 +1503,11 @@ img.about-top-line {
   justify-content: center;
   right: 170px;
 }
+#tokenomics-intro-middle-img {
+  padding: 20px;
+  text-align: center;
+}
+
 
 .tokenomics-intro-middle-img-wpr img {
   width: 100%;
@@ -1752,10 +1757,7 @@ img.about-top-line {
     top: 25px;
   }
 
-  .tokenomics-intro-middle .tokenomics-intro-middle-in {
-    max-width: 280px;
-  }
-
+ 
   .tek-starf {
     top: 16%;
     left: -6%;
@@ -1775,10 +1777,12 @@ img.about-top-line {
   }
   .tokenomics-intro-middle-img-wpr{
     right: 0px;
+    width: 100%;
 
   }
 
 }
+
 
 
 
@@ -1807,7 +1811,7 @@ img.about-top-line {
   }
 
   .tokenomics-intro-middle .tokenomics-intro-middle-in {
-    max-width: 260px;
+    width: 100%;
     -webkit-transform: translateX(-35px);
     -ms-transform: translateX(-35px);
     transform: translateX(-35px);
@@ -1818,7 +1822,9 @@ img.about-top-line {
   }
 }
 
-
+#apexchartsq5kai1pv{
+  width: 100% !important;
+}
 
 @media (max-width: 479px) {
 
@@ -2446,32 +2452,55 @@ shape-line img {
 
 /* Chart container styling */
 .chart-container {
-  padding: 1rem; /* p-4 */
+  padding: 16px;
   width: 100%;
-  height: auto;
-  max-height: 400px; /* md:h-[400px] */
-  border-radius: 0.5rem; /* rounded-lg */
+  height: auto; /* Adjust height automatically based on content */
+  max-height: 500px; /* Optional: Max height for large screens */
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto; /* Center the chart horizontally */
 }
 
 /* Responsive adjustments for chart container */
-@media (max-width: 768px) {
-  .chart-container {
-    max-height: 380px; /* Responsive height for smaller screens */
-  }
-}
+
 
 /* Chart scaling adjustments */
 #chart {
   transform: scale(1); /* Default scale */
 }
 
-@media (max-width: 768px) {
-  #chart {
-    transform: scale(1.5); /* md:scale-150 */
-  }
+
+
+/* Styling for the section */
+#Token {
+  padding: 20px;
+  text-align: center;
 }
 
+/* Title styling */
+.title {
+  font-size: 2.25rem; /* 36px */
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* Styling for the pie-chart container */
+#pie-chart {
+  padding: 16px;
+  width: 100%;
+  max-height: 400px; /* Max height for the chart container */
+  border-radius: 8px; /* Rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center horizontally */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+/* Responsive styling */
+#apexcharts-pie{
+  width: 100% !important;
+}
 
