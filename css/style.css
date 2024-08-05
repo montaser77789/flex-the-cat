@@ -1494,35 +1494,23 @@ img.about-top-line {
 }
 
 .tokenomics-intro-middle-img-wpr {
-  width: 100%;
+  width: 100vw !important;
   position: relative;
   z-index: 2;
-  top: -50px;
+  /* top: -50px; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  right: 170px;
 }
 
 .tokenomics-intro-middle-img-wpr img {
   width: 100%;
 }
 
-.cloud-graphics {
-  position: absolute;
-  top: -20px;
-  right: -184px;
-  z-index: 3;
-  -webkit-transform-origin: left;
-  -ms-transform-origin: left;
-  transform-origin: left;
-}
 
-.cloud-graphics {
-  position: absolute;
-  top: -20px;
-  right: -184px;
-  z-index: 3;
-  -webkit-transform-origin: left;
-  -ms-transform-origin: left;
-  transform-origin: left;
-}
+
+
 
 .cloud-graphics-image {
   width: 100%;
@@ -1668,11 +1656,6 @@ img.about-top-line {
     max-width: initial;
   }
 
-  .cloud-graphics {
-    top: 2%;
-    right: -35%;
-    width: 40%;
-  }
 
   .cloud-graphics p {
     font-size: 20px;
@@ -1790,6 +1773,10 @@ img.about-top-line {
   .tokenomics-intro-right {
     padding-top: 50px;
   }
+  .tokenomics-intro-middle-img-wpr{
+    right: 0px;
+
+  }
 
 }
 
@@ -1903,27 +1890,7 @@ h2, .h2-title {
   font-size: 68px;
   line-height: 1.2;
 }
-.roadmap-list {
-  width: 100%;
-  /* max-width: 280px; */
-  max-width: 500px;
-  padding-top: 5px;
-}
-.roadmap-list-item {
-  position: relative;
-  padding-bottom: 94px;
-}
-.roadmap-list-item-wrp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
+
 .roadmap-icon {
   margin-right: 15px;
   -webkit-filter: drop-shadow(0px 44px 44px rgba(46, 147, 181, 0.7));
@@ -2019,9 +1986,7 @@ h2, .h2-title {
   h2, .h2-title {
     font-size: 52px;
 }
-.roadmap-list {
-  max-width: 420px;
-}
+
 .roadmap-intro h3 {
   font-size: 18px;
 }
@@ -2054,9 +2019,7 @@ h2, .h2-title {
 h2, .h2-title {
   font-size: 44px;
 }
-.roadmap-list-item {
-  padding-bottom: 80px;
-}
+
 .roadmap-icon {
   max-width: 80px;
   max-height: inherit;
@@ -2087,13 +2050,72 @@ h2, .h2-title {
 .roadmap-left h2 {
   text-align: center;
 }
-.roadmap-list {
-  max-width: 430px;
+.roadmap-container {
+  padding: 2.5rem 0; /* Vertical padding */
+}
+
+.roadmap-title {
+  font-size: 2.25rem; /* 4xl */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2.5rem; /* mb-10 */
+}
+
+.roadmap-content {
+  max-width: 1200px; /* Adjust as needed */
   margin: 0 auto;
+  padding: 0 1rem; /* px-4 */
 }
-.roadmap-list-item {
-  padding-bottom: 90px;
+
+.roadmap-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem; /* mb-10 */
+  position: relative;
+}
+
+.step-number {
+  width: 4rem; /* 16 */
+  height: 4rem; /* 16 */
+  background-color: #3b82f6; /* Blue background */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem; /* 2xl */
+  font-weight: bold;
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.step-details {
+  text-align: center;
+}
+
+.step-title {
+  font-size: 1.25rem; /* xl */
+  font-weight: 600; /* Semi-bold */
+}
+
+.step-description {
+  color: #4a5568; /* Gray-700 */
+}
+
+.step-line {
+  width: 0.25rem; /* 1 */
+  height: 4rem; /* 16 */
+  background-color: #3b82f6; /* Blue background */
+}
+
+
+
 .roadmap-icon {
   -webkit-filter: drop-shadow(0px 0px 24px rgba(46, 147, 181, 0.7));
   filter: drop-shadow(0px 0px 24px rgba(46, 147, 181, 0.7));
@@ -2405,12 +2427,51 @@ shape-line img {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.6; /* يمكن تعديل هذا حسب الحاجة */
-  color: #5F6082;
+  color: #000;
   text-decoration: none;
 }
 
 .menu-item:hover {
   text-decoration: underline; /* إضافة تأثير عند التمرير */
+}
+/* Main section styling */
+
+
+/* Title styling */
+.chart-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: bold;
+  margin-bottom: 1.25rem; /* m-5 */
+}
+
+/* Chart container styling */
+.chart-container {
+  padding: 1rem; /* p-4 */
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* md:h-[400px] */
+  border-radius: 0.5rem; /* rounded-lg */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive adjustments for chart container */
+@media (max-width: 768px) {
+  .chart-container {
+    max-height: 380px; /* Responsive height for smaller screens */
+  }
+}
+
+/* Chart scaling adjustments */
+#chart {
+  transform: scale(1); /* Default scale */
+}
+
+@media (max-width: 768px) {
+  #chart {
+    transform: scale(1.5); /* md:scale-150 */
+  }
 }
 
 

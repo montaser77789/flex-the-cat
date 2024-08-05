@@ -25,3 +25,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var options = {
+    series: [13, 43, 22],
+    chart: {
+      width: "100%",
+      type: "pie",
+    },
+    labels: ["Balance", "Expense", "Credit Loan"],
+    responsive: [
+      {
+        breakpoint: 768,
+        options: {
+          chart: {
+            width: 380,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  chart.render();
+});
+

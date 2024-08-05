@@ -38,6 +38,7 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   </head>
   <body>
     <header class="main-head main-head sticky">
@@ -682,7 +683,7 @@
                     transform: translate(0%, 4.9635%) translate3d(0px, 0px, 0px);
                   "
                 >
-                  <img
+                  <!-- <img
                     src="images/token-middle-image.webp"
                     class="tokenomics-intro-middle-img"
                     alt=""
@@ -693,37 +694,14 @@
                       opacity: 1;
                       transform: translate(0px, 0px);
                     "
-                  />
-                </div>
-                <div
-                  class="cloud-graphics"
-                  style="
-                    translate: none;
-                    rotate: none;
-                    scale: none;
-                    opacity: 1;
-                    transform: translate(0px, 0px);
-                  "
-                >
-                  <div
-                    class="cloud-graphics-in"
-                    data-parallax="0.3"
-                    style="
-                      translate: none;
-                      rotate: none;
-                      scale: none;
-                      transform: translate(0%, 7.4733%)
-                        translate3d(0px, 0px, 0px);
-                    "
-                  >
-                    <img
-                      src="images/cloud-graphics.svg"
-                      class="cloud-graphics-image"
-                      alt=""
-                    />
-                    <p>Sol: No Taxes!<br />Eth: buy/sell 3%</p>
-                  </div>
-                </div>
+                  /> -->
+                  <section id="tokenomics-intro-middle-img">
+                    <h1 class="title">Chart</h1>
+                    <div id="pie-chart" class="chart-container">
+                      <div id="chart"></div>
+                    </div>
+                  </section>
+             
               </div>
             </div>
             <div
@@ -766,186 +744,46 @@
           <div class="row roadmap-row">
             <div class="roadmap-left-col col-lg-6">
               <div data-aos="fade-right" class="roadmap-left">
-                <h2>Roadmap</h2>
-                <div class="roadmap-list">
-                  <div class="roadmap-list-item">
-                    <div class="roadmap-list-item-wrp">
-                      <img
-                        src="images/phase1-new.webp"
-                        class="roadmap-icon"
-                        alt=""
-                        style="
-                          translate: none;
-                          rotate: none;
-                          scale: none;
-                          opacity: 1;
-                          transform: translate(0px, 0px);
-                        "
-                      />
-                      <div
-                        class="roadmap-intro"
-                        style="
-                          translate: none;
-                          rotate: none;
-                          scale: none;
-                          opacity: 1;
-                          transform: translate(0px, 0px);
-                        "
-                      >
-                        <p>Step 1</p>
-                        <h3>
-                          Conceptualize $FELIX Token And Tools <br />- Build
-                          Website And Deploy Token <br />- Start Community
-                          Building
-                        </h3>
+                <div class="roadmap-container">
+                    <h1 class="roadmap-title">Our Roadmap</h1>
+                    <div class="roadmap-content">
+                      <div class="roadmap-steps">
+                        <div class="step" data-aos="fade-down-right">
+                          <div class="step-number">1</div>
+                          <div class="step-details">
+                            <h2 class="step-title">Step 1</h2>
+                            <p class="step-description">Description for step 1</p>
+                          </div>
+                          <div class="step-line"></div>
+                        </div>
+                        <div class="step" data-aos="fade-down-left">
+                          <div class="step-number">2</div>
+                          <div class="step-details">
+                            <h2 class="step-title">Step 2</h2>
+                            <p class="step-description">Description for step 2</p>
+                          </div>
+                          <div class="step-line"></div>
+                        </div>
+                        <div class="step" data-aos="zoom-in">
+                          <div class="step-number">3</div>
+                          <div class="step-details">
+                            <h2 class="step-title">Step 3</h2>
+                            <p class="step-description">Description for step 3</p>
+                          </div>
+                          <div class="step-line"></div>
+                        </div>
+                        <div class="step" data-aos="zoom-in-up">
+                          <div class="step-number">4</div>
+                          <div class="step-details">
+                            <h2 class="step-title">Step 4</h2>
+                            <p class="step-description">Description for step 4</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="roadmap-action">
-                      <div
-                        class="rd-line"
-                        style="
-                          clip-path: polygon(
-                            0px 0px,
-                            100% 0px,
-                            100% 100%,
-                            0% 100%
-                          );
-                        "
-                      >
-                        <img src="images/rd-line.svg" alt="" />
-                      </div>
-                      <span
-                        class="rd-dotted"
-                        style="
-                          translate: none;
-                          rotate: none;
-                          scale: none;
-                          opacity: 1;
-                          transform: translate(0px, 0px);
-                        "
-                      ></span>
+                     
                     </div>
                   </div>
-                  <div class="roadmap-list-item">
-                    <div class="roadmap-list-item-wrp">
-                      <img
-                        src="images/phase2-new.webp"
-                        class="roadmap-icon"
-                        alt=""
-                        style="
-                          translate: none;
-                          rotate: none;
-                          scale: none;
-                          opacity: 1;
-                          transform: translate(0px, 0px);
-                        "
-                      />
-                      <div
-                        class="roadmap-intro"
-                        style="
-                          translate: none;
-                          rotate: none;
-                          scale: none;
-                          opacity: 1;
-                          transform: translate(0px, 0px);
-                        "
-                      >
-                        <p>Step 2</p>
-                        <h3>
-                          - Conduct Presale On PinkSale <br />- List On
-                          CoinGecko And CoinMarketCap <br />- Listing in Bitmart
-                          <br />- Develop FELIX Swap, NFT AI Tool and Staking
-                          Dapp <br />- Market Via Social Media <br />- New
-                          Network
-                        </h3>
-                      </div>
-                    </div>
-                    <div class="roadmap-action">
-                      <div
-                        class="rd-line"
-                        style="
-                          clip-path: polygon(
-                            0px 0px,
-                            100% 0px,
-                            100% 100%,
-                            0% 100%
-                          );
-                        "
-                      >
-                        <img src="images/rd-line.svg" alt="" />
-                      </div>
-                      <span
-                        class="rd-dotted"
-                        style="
-                          translate: none;
-                          rotate: none;
-                          scale: none;
-                          opacity: 1;
-                          transform: translate(0px, 0px);
-                        "
-                      ></span>
-                    </div>
-                  </div>
-                  <div class="roadmap-list-item">
-                    <div class="roadmap-list-item-wrp">
-                      <img
-                        src="images/phase3-new.webp"
-                        class="roadmap-icon"
-                        alt=""
-                        style="
-                          translate: none;
-                          rotate: none;
-                          scale: none;
-                          opacity: 1;
-                          transform: translate(0px, 0px);
-                        "
-                      />
-                      <div
-                        class="roadmap-intro"
-                        style="
-                          translate: none;
-                          rotate: none;
-                          scale: none;
-                          opacity: 1;
-                          transform: translate(0px, 0px);
-                        "
-                      >
-                        <p>Step 3</p>
-                        <h3>
-                          - Listings on new exchanges <br />- Intensify
-                          Marketing Efforts <br />- New partners <br />- Educate
-                          Community And Sustain Growth
-                        </h3>
-                      </div>
-                    </div>
-                    <div class="roadmap-action">
-                      <div
-                        class="rd-line"
-                        style="
-                          clip-path: polygon(
-                            0px 0px,
-                            100% 0px,
-                            100% 100%,
-                            0% 100%
-                          );
-                        "
-                      >
-                        <img src="images/rd-line.svg" alt="" />
-                      </div>
-
-                      <span
-                        class="rd-dotted"
-                        style="
-                          translate: none;
-                          rotate: none;
-                          scale: none;
-                          opacity: 1;
-                          transform: translate(0px, 0px);
-                        "
-                      ></span>
-                    </div>
-                  </div>
-                </div>
+               
               </div>
             </div>
             <div
@@ -1414,6 +1252,8 @@
       AOS.init();
     </script>
 
+
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const navbarTogglers = document.querySelectorAll(".navbar-toggler");
@@ -1447,5 +1287,30 @@
         });
       });
     </script>
-  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.52.0/apexcharts.min.js" integrity="sha512-piY4QAXPoG2xLdUZZbcc5klXzMxckrQKY9A2o6nKDRt9inolvvLbvGPC+z9IZ29b28UJlD05B7CjxxPaxh4bjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+    var options = {
+      series: [13, 43, 22],
+      chart: {
+      width: 380,
+      type: 'pie',
+    },
+    labels: ['Balance', 'Expense', 'Credit Loan',],
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 200
+        },
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }]
+    };
+
+    var chart = new ApexCharts(document.querySelector("#pie-chart"), options);
+    chart.render();
+</script>
+</body>
 </html>
