@@ -2490,17 +2490,29 @@ shape-line img {
 #pie-chart {
   padding: 16px;
   width: 100%;
-  max-height: 400px; /* Max height for the chart container */
   border-radius: 8px; /* Rounded corners */
   display: flex;
-  justify-content: center;
+  height: auto;   justify-content: center;
   align-items: center;
   margin: 0 auto; /* Center horizontally */
   box-sizing: border-box; /* Ensure padding is included in width/height */
+  transform: scale(1);
 }
+/* Apply scaling for larger screens */
+@media (max-width: 576px) {
+  #pie-chart {
+    transform: scale(2);
+  }
+}
+@media (min-width: 768px) {
+  #pie-chart {
+    height: 400px;
+  }
+}
+/* Apply default scaling */
 
 /* Responsive styling */
 #apexcharts-pie{
-  width: 100% !important;
+  width: 100% !important; 
 }
 
