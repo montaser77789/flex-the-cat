@@ -2169,15 +2169,9 @@ h2, .h2-title {
   max-width: 828px;
   margin: 12px auto 0;
 }
-.footer-desc p:first-child {
-  color: var(--black);
-}
-.footer-desc p {
-  line-height: 1.77em;
-}
-.footer-desc p>a {
-  color: var(--theme-black);
-}
+
+
+
 .ftr-slogan {
   position: absolute;
   width: 100%;
@@ -2274,10 +2268,7 @@ shape-line img {
   .footer-logo {
       max-width: 200px;
   }
-  .footer-desc p:first-child {
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
+
 .ftr-slogan p {
   font-size: 50px;
   bottom: 11%;
@@ -2342,3 +2333,61 @@ shape-line img {
   bottom: 18%;
 }
 }
+.custom-container {
+  display: grid;
+  margin-top: 1.25rem; /* mt-5 */
+  grid-template-columns: 1fr; /* Default to single column */
+  align-items: end;
+  width: 100%;
+  justify-content: center;
+  text-align: right;
+  padding-right: 0;
+  margin: 28px 0;
+}
+
+.custom-paragraph {
+  display: none; /* Hidden by default */
+}
+
+.custom-paragraph p {
+  font-size: 1.5rem; /* text-2xl */
+  text-align: left; /* text-left */
+  display: inline-block; /* inline-block */
+}
+
+@media (min-width: 768px) {
+  .custom-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+    justify-content: flex-start; /* sm:justify-start */
+    margin: 10px 0px;
+  }
+
+  .custom-paragraph {
+    display: block; /* Show on medium and larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-container {
+    width: 892px; /* lg:w-[892px] */
+  }
+}
+.custom-style {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Tailwind's gap-y-6 translates to 1.5rem gap */
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-style ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Tailwind's gap-4 translates to 1rem gap */
+  list-style: none;
+}
+.custom-style ul li  a svg{
+  color: #000000;
+}
+
