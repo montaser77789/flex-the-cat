@@ -2309,7 +2309,7 @@ shape-line img {
 }
 .footer-logo {
   max-width: 180px;
-  margin-bottom: 5px;
+  margin: 5px 5px 0 20px
 }
 .ftr-slogan p {
   font-size: 65px;
@@ -2390,4 +2390,27 @@ shape-line img {
 .custom-style ul li  a svg{
   color: #000000;
 }
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* تعديل المسافة بين العناصر حسب الحاجة */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6; /* يمكن تعديل هذا حسب الحاجة */
+  color: #5F6082;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  text-decoration: underline; /* إضافة تأثير عند التمرير */
+}
+
 
