@@ -2566,12 +2566,12 @@ shape-line img {
 
 .ser-title {
   font-size: 24px;
-  color: #333;
+  color: white;
 }
 
 .ser-subtitle {
   font-size: 16px;
-  color: #777;
+  color: white;
 }
 
 .fadeInUpMedium {
@@ -2663,4 +2663,11 @@ shape-line img {
   transition: transform 0.8s cubic-bezier(0.5,0.2,0.2,0.8);
   min-height: 150px;
 }
+
+
+.heading-part > span {
+  color: #024d54;
+  font-size: 20px;
+}
+
 
