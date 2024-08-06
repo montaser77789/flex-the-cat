@@ -564,10 +564,7 @@
       <img src="images/about-btm-shape.svg" alt="" class="abt-btm-shape" />
       <img src="./images/about-btm-line.svg" alt="" class="abt-btm-line" />
     </section>
-    <section id="Token">
-        <h1>Chart</h1>
-        <div id="pie-chart"></div>
-      </section>
+  
     <section class="tokenomics" id="felixnomics" data-anim="parent-anim-sec">
       <img src="./images/tek-top-line.svg" class="tek-top-line" alt="" />
       <img src="./images/download (1).png" class="tek-top-wave" alt="" />
@@ -585,6 +582,7 @@
           >
             Tokenomics
           </h2>
+        
           <div class="tokenomics-intro">
             <div
               class="tokenomics-intro-left"
@@ -675,8 +673,8 @@
                     transform: translate(0%, 4.9635%) translate3d(0px, 0px, 0px);
                   "
                 >
-                  <!-- <img
-                    src="images/token-middle-image.webp"
+                  <img
+                    src="images/Screenshot 2024-08-06 053227.png"
                     class="tokenomics-intro-middle-img"
                     alt=""
                     style="
@@ -686,7 +684,7 @@
                       opacity: 1;
                       transform: translate(0px, 0px);
                     "
-                  /> -->
+                  />
                  
              
               </div>
@@ -1274,29 +1272,6 @@
         });
       });
     </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.52.0/apexcharts.min.js" integrity="sha512-piY4QAXPoG2xLdUZZbcc5klXzMxckrQKY9A2o6nKDRt9inolvvLbvGPC+z9IZ29b28UJlD05B7CjxxPaxh4bjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script type="text/javascript">
-    var options = {
-      series: [13, 43, 22],
-      chart: {
-      width: 380,
-      type: 'pie',
-    },
-    responsive: [{
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 200
-        },
-        legend: {
-          position: 'bottom'
-        }
-      }
-    }]
-    };
 
-    var chart = new ApexCharts(document.querySelector("#pie-chart"), options);
-    chart.render();
-</script>
 </body>
 </html>

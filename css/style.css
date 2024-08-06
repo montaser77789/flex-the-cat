@@ -1494,7 +1494,7 @@ img.about-top-line {
 }
 
 .tokenomics-intro-middle-img-wpr {
-  width: 100vw !important;
+  width: 100%;
   position: relative;
   z-index: 2;
   /* top: -50px; */
@@ -1776,7 +1776,7 @@ img.about-top-line {
     padding-top: 50px;
   }
   .tokenomics-intro-middle-img-wpr{
-    right: 0px;
+    right: -48px;
     width: 100%;
 
   }
@@ -2496,23 +2496,6 @@ shape-line img {
   align-items: center;
   margin: 0 auto; /* Center horizontally */
   box-sizing: border-box; /* Ensure padding is included in width/height */
-  transform: scale(1);
 }
-/* Apply scaling for larger screens */
-@media (max-width: 576px) {
-  #pie-chart {
-    transform: scale(2);
-  }
-}
-@media (min-width: 768px) {
-  #pie-chart {
-    height: 400px;
-  }
-}
-/* Apply default scaling */
 
-/* Responsive styling */
-#apexcharts-pie{
-  width: 100% !important; 
-}
 
