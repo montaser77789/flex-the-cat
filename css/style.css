@@ -1751,7 +1751,6 @@ img.about-top-line {
     padding-top: 50px;
   }
   .tokenomics-intro-middle-img-wpr{
-    right: -10px;
     width: 100%;
 
   }
@@ -2507,6 +2506,7 @@ shape-line img {
 .telegram-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: rgb(51, 55, 58);
   border-radius: 386px;
   padding: 10px 20px;
@@ -2519,6 +2519,9 @@ shape-line img {
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
+}
+.telegram-button p {
+  margin: 0;
 }
 
 #services-part {
@@ -2665,9 +2668,9 @@ shape-line img {
 }
 
 
-.heading-part > span {
-  color: #024d54;
-  font-size: 20px;
+  .heading-part > span {
+    color: #01e8fe;
+    font-size: 20px;
 }
 
 

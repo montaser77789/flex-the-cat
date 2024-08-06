@@ -27,18 +27,30 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const copyButtons = document.querySelectorAll('.copy-button');
-  
-  copyButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const textToCopy = button.previousElementSibling.textContent;
-      navigator.clipboard.writeText(textToCopy).then(() => {
-        alert('Copied to clipboard: ' + textToCopy);
-      }).catch(err => {
-        console.error('Could not copy text: ', err);
-      });
-    });
+  const copyButton = document.getElementById('copy-button');
+  const contractText = document.getElementById('contract-text');
+  const copyStatus = document.getElementById('copy-status');
+
+  copyButton.addEventListener('click', () => {
+      // Create a temporary textarea to hold the text
+      const textarea = document.createElement('textarea');
+      textarea.value = contractText.textContent;
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+          document.execCommand('copy');
+          copyStatus.textContent = 'Copied';
+      } catch (err) {
+          copyStatus.textContent = 'Failed to copy';
+      }
+      document.body.removeChild(textarea);
+
+      // Optionally clear the status text after a few seconds
+      setTimeout(() => {
+          copyStatus.textContent = '';
+      }, 2000);
   });
 });
+
 
 
