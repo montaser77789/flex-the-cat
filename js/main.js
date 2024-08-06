@@ -26,30 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  var options = {
-    series: [13, 43, 22],
-    chart: {
-      width: "100%",
-      type: "pie",
-    },
-    labels: ["Balance", "Expense", "Credit Loan"],
-    responsive: [
-      {
-        breakpoint: 768,
-        options: {
-          chart: {
-            width: 380,
-          },
-          legend: {
-            position: "bottom",
-          },
-        },
-      },
-    ],
-  };
-
-  var chart = new ApexCharts(document.querySelector("#chart"), options);
-  chart.render();
+document.addEventListener('DOMContentLoaded', () => {
+  const copyButtons = document.querySelectorAll('.copy-button');
+  
+  copyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const textToCopy = button.previousElementSibling.textContent;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('Copied to clipboard: ' + textToCopy);
+      }).catch(err => {
+        console.error('Could not copy text: ', err);
+      });
+    });
+  });
 });
+
 
