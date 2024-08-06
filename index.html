@@ -673,7 +673,7 @@
                     transform: translate(0%, 4.9635%) translate3d(0px, 0px, 0px);
                   "
                 >
-                  <img
+                  <!-- <img
                     src="images/Screenshot 2024-08-06 053227.png"
                     class="tokenomics-intro-middle-img"
                     alt=""
@@ -684,7 +684,9 @@
                       opacity: 1;
                       transform: translate(0px, 0px);
                     "
-                  />
+                  /> -->
+                  <div id="chartdiv" style="width: 100%; height: 500px;"></div>
+
                  
              
               </div>
@@ -1236,6 +1238,50 @@
       // Initialize AOS
       AOS.init();
     </script>
+     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+     <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+     <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+<script>
+  am4core.ready(function () {
+
+    // Themes begin
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+    // this creates initial fade-in
+
+    chart.legend = new am4charts.Legend();
+
+    chart.data = [
+      {
+        country: "PRESALL",
+        litres: 45
+      },
+      {
+        country: "Burn",
+        litres: 30
+      },
+      {
+        country: "PUBLIC SEll",
+        litres: 20
+      },
+      {
+        country: "MARKEting",
+        litres: 5
+      },
+
+
+    ];
+
+    var series = chart.series.push(new am4charts.PieSeries3D());
+    series.dataFields.value = "litres";
+    series.dataFields.category = "country";
+
+  }); // end am4core.ready()
+</script>
 
 
 
