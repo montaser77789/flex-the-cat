@@ -1752,9 +1752,14 @@ img.about-top-line {
   }
   .tokenomics-intro-middle-img-wpr{
     width: 100%;
+    right: -10px;
 
   }
 
+}
+
+.copy-status{
+  color: white;
 }
 
 
