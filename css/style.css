@@ -853,13 +853,7 @@ img.about-top-line {
   margin: -15px 0 0;
 }
 
-.abt-sec .abt-sec-bg .about-top-shape2 {
-  position: absolute;
-  top: -242px;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
+
 
 .abt-sec .abt-sec-bg .about-bg-color {
   -webkit-box-flex: 1;
