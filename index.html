@@ -1245,27 +1245,22 @@
       });
 
       document.getElementById('copy-button').addEventListener('click', function() {
-  // احصل على النص من العنصر
   var contractText = document.getElementById('contract-text').textContent;
 
-  // إنشاء عنصر إدخال مؤقت لنسخ النص
   var tempInput = document.createElement('input');
   tempInput.value = contractText;
   document.body.appendChild(tempInput);
 
-  // تحديد النص في العنصر المؤقت ونسخه
   tempInput.select();
   document.execCommand('copy');
 
-  // إزالة العنصر المؤقت
   document.body.removeChild(tempInput);
 
-  // عرض رسالة "copied"
-  var copyStatus = document.getElementById('copy-status');
+  var copyStatus = document.getElementById('copy-button');
   copyStatus.textContent = 'copied';
 
   setTimeout(function() {
-      copyStatus.textContent = '';
+      copyStatus.textContent = 'copy';
   }, 2000); 
 });
     </script>
