@@ -2667,13 +2667,15 @@ shape-line img {
 }
 .block2__widget {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   background: #222831;
   box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.25);
   border-radius: 30px;
   background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(210 49 249) 0%, rgb(44 237 170) 100%);
   border: 3px solid #ff00f8;
+  max-width: 500px;
+  margin: auto;
 }
 
 @media screen and (max-width: 600px) {
