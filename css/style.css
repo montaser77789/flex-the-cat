@@ -1887,11 +1887,8 @@ h2,
 
   .step-number {
     width: 4rem;
-    /* 16 */
     height: 4rem;
-    /* 16 */
-    background-color: #3b82f6;
-    /* Blue background */
+    background-color: #464b4e;
     color: white;
     display: flex;
     align-items: center;
@@ -1925,7 +1922,7 @@ h2,
     /* 1 */
     height: 4rem;
     /* 16 */
-    background-color: #3b82f6;
+    background-color: #464b4e;
     /* Blue background */
   }
 
